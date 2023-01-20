@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <title>Teste de Comentarios</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>  
+            <link rel="stylesheet" type="text/css" href="style.css">    
+            <ul class="menu">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+      <div class="menu-container" style="display: flex; align-items: center;">
+        <h1>Welcome to my homepage!</h1>
+      </div>
+        <p>Deixe seu comentario.</p>
+        <form id="comment-form">
+            <br>
+            <label for="username">Nome:<input type="text" id="username" name="username"></label> 
+        <div>
+          <label for="font-select">Fonte: <select id="font-select" name="font">
+              <option value="Arial">Arial</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Courier New">Courier New</option>
+            </select></label>
+            <label for="color-select">Cor: <select id="color-select" name="color">
+              <option value="black">Preto</option>
+              <option value="red">Vermelho</option>
+              <option value="green">Verde</option>
+              <option value="blue">Azul</option>
+            </select></label>            
+            <label for="comment">Comentario:</label>
+            <textarea name="comment" rows="10" cols="50" maxlength="2500"></textarea>
+            <br>
+           <input type="submit" value="Enviar">
+          </form>
+          
+          <div id="comments"> 
+            <script src="comments.js"> </script>        
+    </main>
+</body>
+</html>

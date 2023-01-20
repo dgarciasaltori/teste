@@ -1,0 +1,78 @@
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  form {
+    @media only screen and (max-width: 600px) {
+      /*CSS Rules for small screens*/
+      label, input {
+        width: 100%;
+        display: center;
+        margin-bottom: 20px;
+      }
+    }
+    background-color: rgb(73, 73, 73);
+    border-radius: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] { @media only screen and (max-width: 600px) {
+    /*CSS Rules for small screens*/
+    label, input {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }}
+  }
+  input[type="password"]{
+    width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  input[type="submit"] {
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+nav a:hover {
+    color: #ddd;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a.active {
+  background-color: #555;
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+}
