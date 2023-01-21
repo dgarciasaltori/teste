@@ -19,20 +19,21 @@
             <textarea name="comment" id="comments1" rows="10" cols="50" maxlength="2500"></textarea>
             <br>
            <input type="submit" id="submit1" value="Enviar" onclick="adicionarConteudo()">
-          </form>
-        <div id="contagem" id="contagem1">Contagem de comentários: 0</div>                  
-    </main>
-        <div id="conteudo"></div>
+        </form>
+        <div id="conteudo-comentarios" color="orange">
+        </div>
+        <p id="contador-comentarios" color="white"</p>
         <script>
-            var contagem = 0;
-            function adicionarConteudo() {
-                var nome = document.getElementById("username1").value;
-                var comentario = document.getElementById("comments1").value;
-                var conteudo = document.getElementById("conteudo");
-                conteudo.innerHTML += "Nome: " + nome + "<br>Comentário: " + comentario + "<br>";
-                contagem++;
-                document.getElementById("contagem").innerHTML = "Contagem de comentários: " + contagem;
-            }
-        </script> 
+          var contador = 0;
+          function adicionarComentario() {
+            var nome = document.getElementById("nome").value;
+            var comentario = document.getElementById("comentario").value;
+            var conteudoComentarios = document.getElementById("conteudo-comentarios");
+            conteudoComentarios.innerHTML += "<p>" + nome + ": " + comentario + "</p>";
+            contador++;
+            document.getElementById("contador-comentarios").innerHTML = "Comentários: " + contador;
+          }
+        </script>
+    </main>
 </body>
 </html>
