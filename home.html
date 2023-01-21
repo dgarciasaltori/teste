@@ -18,17 +18,21 @@
             <label for="comment">Comentario:</label>
             <textarea name="comment" id="comments1" rows="10" cols="50" maxlength="2500"></textarea>
             <br>
-           <input type="submit" id="submit1" value="Enviar">
+           <input type="submit" id="submit1" value="Enviar" onclick="adicionarConteudo()">
           </form>
         <div id="conteudo"></div>
         <script>
+            var contagem = 0;
             function adicionarConteudo() {
                 var nome = document.getElementById("username1").value;
                 var comentario = document.getElementById("comments1").value;
                 var conteudo = document.getElementById("conteudo");
-                conteudo.innerHTML = "Nome: " + nome + "<br>Comentario: " + comentario;
+                conteudo.innerHTML += "Nome: " + nome + "<br>Comentário: " + comentario + "<br>";
+                contagem++;
+                document.getElementById("contagem").innerHTML = "Contagem de comentários: " + contagem;
             }
         </script> 
+        <div id="contagem" id="contagem1">Contagem de comentários: 0</div>
                   
     </main>
 </body>
