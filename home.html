@@ -8,7 +8,8 @@
     </header>
     <main>
       <div class="menu-container" style="display: flex; align-items: center;">
-        <h1>Treinando Comentario!</h1>
+        <h1>Inserir comentários de forma automatizada!</h1><br>
+          <h2>Usando Python e Selenium</h2>
       </div>
         <p>Deixe seu comentario.</p>
         <form id="form-comentarios">
@@ -20,12 +21,9 @@
           <br>
           <button type="button" onclick="adicionarComentario()">Enviar</button>
         </form>
-        
-        <div id="conteudo-comentarios">
-        </div>
-        
         <p id="contador-comentarios"></p>
-        
+        <div id="conteudo-comentarios">
+        </div>        
         <script>
           var contador = 0;
           function adicionarComentario() {
