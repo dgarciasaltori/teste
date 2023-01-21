@@ -11,18 +11,21 @@
         <h1>Treinando Comentario!</h1>
       </div>
         <p>Deixe seu comentario.</p>
-        <form id="comment-form">
-            <br>
-            <label for="username">Nome:<input type="text" id="username1" name="username"></label> 
-        <div>
-            <label for="comment">Comentario:</label>
-            <textarea name="comment" id="comments1" rows="10" cols="50" maxlength="2500"></textarea>
-            <br>
-           <input type="submit" id="submit1" value="Enviar" onclick="adicionarConteudo()">
+        <form id="form-comentarios">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome">
+          <br>
+          <label for="comentario">Comentário:</label>
+          <textarea id="comentario" name="comentario"></textarea>
+          <br>
+          <button type="button" onclick="adicionarComentario()">Enviar</button>
         </form>
-        <div id="conteudo-comentarios" color="orange">
+        
+        <div id="conteudo-comentarios">
         </div>
-        <p id="contador-comentarios" color="white"</p>
+        
+        <p id="contador-comentarios"></p>
+        
         <script>
           var contador = 0;
           function adicionarComentario() {
@@ -33,7 +36,7 @@
             contador++;
             document.getElementById("contador-comentarios").innerHTML = "Comentários: " + contador;
           }
-        </script>
+        </script>                
     </main>
 </body>
 </html>
