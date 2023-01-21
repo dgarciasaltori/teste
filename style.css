@@ -76,3 +76,8 @@ nav a.active {
   padding: 8px;
   border-radius: 5px;
 }
+<style>
+  #conteudo{
+    color: white;
+  }
+</style>
