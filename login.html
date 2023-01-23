@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <h1>Faça seu login</h1>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <form id="form-login">
+      <label for="username">Nome de usuário:</label>
+      <input type="text" id="username" name="username">
+      <br>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password">
+      <br>
+      <button type="submit">Entrar</button>
+    </form>
+    <div id="mensagem-sucesso" style="display:none;"></div>
+    <script>
+      // Seleciona o formulário de login
+      var form = document.getElementById("form-login");
+      // Adiciona um evento de submit ao formulário
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Verifica se o nome de usuário e a senha estão corretos
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username === "admin" && password === "1234") {
+          // Mostra a mensagem de sucesso
+          var mensagem = document.getElementById("mensagem-sucesso");
+          mensagem.innerHTML = "Login realizado com sucesso!";
+          mensagem.style.display = "block"; window.location.href = "home.html"
+        } else {
+          alert("Nome de usuário ou senha incorretos.");
+        }
+      });
+    </script>
+  </body>
+</html>
